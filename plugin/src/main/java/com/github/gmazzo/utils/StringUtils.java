@@ -3,9 +3,11 @@ package com.github.gmazzo.utils;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import com.thoughtworks.go.plugin.api.logging.Logger;
 
 public final class StringUtils {
-    private static final Pattern EMAIL_PATTERN = Pattern.compile("\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b", Pattern.CASE_INSENSITIVE);
+    private static final Pattern EMAIL_PATTERN = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,9}$", Pattern.CASE_INSENSITIVE);
+    private static final Logger LOGGER = Logger.getLoggerFor(StringUtils.class);
 
     public static boolean isBlank(String text) {
         return text == null || text.matches("\\s*");
@@ -17,6 +19,7 @@ public final class StringUtils {
 
     public static String extractEmail(String text) {
         Matcher m = EMAIL_PATTERN.matcher(text);
+        LOGGER.info("Found Email:" + m.find() + in "text: " + text);
         return m.find() ? m.group() : null;
     }
 
@@ -33,5 +36,4 @@ public final class StringUtils {
 
         return res;
     }
-
 }
