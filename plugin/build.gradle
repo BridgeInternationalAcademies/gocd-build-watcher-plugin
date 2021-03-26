@@ -5,7 +5,7 @@ apply plugin: 'idea'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def goVersion = '16.3.0'
+def goVersion = '20.1.2'
 
 def repoName = 'gocd-build-watcher-plugin'
 def repoDesc = 'A GoCD notification plugin which sends direct emails and Slack messages to the person who breaks a build'

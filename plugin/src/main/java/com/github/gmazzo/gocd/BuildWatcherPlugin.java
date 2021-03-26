@@ -173,13 +173,14 @@ public class BuildWatcherPlugin implements GoPlugin {
             String userpass = settings.serverAPIUsername + ":" + settings.serverAPIPassword;
             String basicAuth = "Basic " + DatatypeConverter.printBase64Binary(userpass.getBytes());
             connection.setRequestProperty("Authorization", basicAuth);
+            connection.setRequestProperty("Accept", "application/vnd.go.cd+json");
         }
         return connection;
     }
 
     private PipelineInstance getPipelineInstance(PluginSettings settings, String name, int counter) {
         try {
-            URLConnection connection = new URL(GO_BASE_URL + "/pipelines/" + name + "/instance/" + counter).openConnection();
+            URLConnection connection = new URL(GO_BASE_URL + "/pipelines/" + name +"/" + counter).openConnection();
             fillAPIAuth(connection, settings);
 
             return gson.fromJson(new InputStreamReader(connection.getInputStream()), PipelineInstance.class);
