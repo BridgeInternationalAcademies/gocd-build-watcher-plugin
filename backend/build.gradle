@@ -1,12 +1,9 @@
 apply plugin: 'war'
-apply plugin: 'appengine'
 
 project.sourceCompatibility = JavaVersion.VERSION_1_7
 project.targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.49'
-
     compileOnly 'javax.servlet:servlet-api:2.5'
 
     compile 'com.google.code.gson:gson:2.8.0'
@@ -15,16 +12,6 @@ dependencies {
 war {
     from ("${rootDir}/static") {
         into('static')
-    }
-}
-
-appengine {
-    downloadSdk = true
-    httpPort = 8888
-    appcfg {
-        oauth2 = true
-        email = 'gmazzo65@gmail.com'
-        httpAddress '0.0.0.0'
     }
 }
 
