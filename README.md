@@ -2,11 +2,6 @@
 A GoCD notification plugin which sends direct emails and Slack messages to the person who breaks a build
 ![Screenshot Fail](static/screenshot-fail.png) ![Screenshot Fixed](static/screenshot-fixed.png)
 
-# Installation
-1. Download the lastest release JAR from jCenter: [ ![Download](https://api.bintray.com/packages/gmazzo/maven/gocd-build-watcher-plugin/images/download.svg) ](https://bintray.com/gmazzo/maven/gocd-build-watcher-plugin/_latestVersion#files)
-1. Drop it under `$GOCD_DIR/plugins/external`
-1. Restart Go Server
-
 ## Configuration
 
 ### Accesing pluging Settings (on GoCD)
@@ -41,3 +36,41 @@ You need to install our Slack App into your team and get an API token.
 - **Pipeline Broken Message**: sent to a user when a specific pipeline is broken (the build fails) by the last commit
 - **Pipeline Still Broken Message**: sent to a user when a specific pipeline was broken and the last commit didn' fix it
 - **Pipeline Fixed Message**: sent to a user when a specific pipeline was broken the last commit fixed it
+
+## Installation
+
+To install the plugin you must first clone and build the repository.  Once built:
+1. Copy \plugin\build\libs\build-watcher-plugin-<version>.jar to \<gocd-installation-folder>\plugins\external
+
+# Development
+
+This repository is forked from: https://github.com/gmazzo/gocd-build-watcher-plugin
+
+Modifications:
+1. Uses gradle 6.8.
+2. Targets GoCD 2.1.2.
+3. Changes regex to extract emails from the git usernme.
+
+### Building
+
+To build the repository:
+    `./gradlew assemble`
+
+To clean and rebuild:
+    `./gradlew clean assemble`
+
+### Testing
+
+To execute tests:
+    `./gradlew test`
+
+### Changing the version
+
+To modify the package details, modify variables in /plugin/build.grade
+
+### To Do
+
+The repository is incomplete:
+- Tests are failing due to a lack of mocking framework.
+- Lacking tests in key areas.
+- Dependencies are out of date.

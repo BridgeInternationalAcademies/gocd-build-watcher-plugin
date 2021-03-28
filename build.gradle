@@ -14,5 +14,5 @@ allprojects {
     }
 
     group = 'com.github.newglobe.gocd'
-    version = '0.9'
+    version = '0.1'
 }
