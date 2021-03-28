@@ -74,3 +74,4 @@ The repository is incomplete:
 - Tests are failing due to a lack of mocking framework.
 - Lacking tests in key areas.
 - Dependencies are out of date.
+- Publish packages to ease installation.
