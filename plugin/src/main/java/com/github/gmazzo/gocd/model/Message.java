@@ -1,4 +1,4 @@
-package com.github.gmazzo.gocd.model;
+package com.github.newglobe.gocd.model;
 
 import com.google.gson.Gson;
 
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.github.gmazzo.utils.StringUtils.isBlank;
+import static com.github.newglobe.utils.StringUtils.isBlank;
 
 public class Message {
     public final String text;

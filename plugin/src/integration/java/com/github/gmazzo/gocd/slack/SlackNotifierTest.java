@@ -1,6 +1,6 @@
-package com.github.gmazzo.gocd.slack;
+package com.github.newglobe.gocd.slack;
 
-import com.github.gmazzo.gocd.model.Message;
+import com.github.newglobe.gocd.model.Message;
 
 import org.junit.Before;
 import org.junit.Test;

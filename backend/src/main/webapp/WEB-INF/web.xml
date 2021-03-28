@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>slackCallbackServlet</servlet-name>
-        <servlet-class>com.github.gmazzo.gocd.SlackCallbackServlet</servlet-class>
+        <servlet-class>com.github.newglobe.gocd.SlackCallbackServlet</servlet-class>
         <load-on-startup>true</load-on-startup>
     </servlet>
 

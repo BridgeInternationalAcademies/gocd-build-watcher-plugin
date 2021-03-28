@@ -1,4 +1,4 @@
-package com.github.gmazzo.utils;
+package com.github.newglobe.utils;
 
 import java.io.InputStream;
 import java.util.Scanner;

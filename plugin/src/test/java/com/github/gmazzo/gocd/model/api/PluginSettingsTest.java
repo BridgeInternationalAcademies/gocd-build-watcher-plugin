@@ -1,4 +1,4 @@
-package com.github.gmazzo.gocd.model.api;
+package com.github.newglobe.gocd.model.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -7,9 +7,9 @@ import org.junit.Test;
 
 import java.util.function.Consumer;
 
-import static com.github.gmazzo.gocd.model.api.PluginSettings.SETTING_EMAIL_SMTP_PORT;
-import static com.github.gmazzo.gocd.model.api.PluginSettings.SETTING_EMAIL_SMTP_SSL;
-import static com.github.gmazzo.gocd.model.api.PluginSettings.SETTING_MESSAGE_PIPE_BROKEN;
+import static com.github.newglobe.gocd.model.api.PluginSettings.SETTING_EMAIL_SMTP_PORT;
+import static com.github.newglobe.gocd.model.api.PluginSettings.SETTING_EMAIL_SMTP_SSL;
+import static com.github.newglobe.gocd.model.api.PluginSettings.SETTING_MESSAGE_PIPE_BROKEN;
 import static org.junit.Assert.assertEquals;
 
 public class PluginSettingsTest {
@@ -26,7 +26,10 @@ public class PluginSettingsTest {
     public void testDeserializationAndDefaults_String() {
         PluginSettings settings = changeAndSerialize(($) -> $.addProperty(SETTING_MESSAGE_PIPE_BROKEN, ""));
 
-        assertEquals("Defaults no taken when empty string is stored!", defaults.messagePipeBroken, settings.messagePipeBroken);
+        assertEquals(
+            "Defaults no taken when empty string is stored!", 
+            defaults.messagePipeBroken, 
+            settings.messagePipeBroken);
     }
 
     @Test

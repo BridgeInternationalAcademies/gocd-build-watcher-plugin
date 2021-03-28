@@ -13,6 +13,6 @@ allprojects {
         jcenter()
     }
 
-    group = 'com.github.gmazzo.gocd'
+    group = 'com.github.newglobe.gocd'
     version = '0.9'
 }

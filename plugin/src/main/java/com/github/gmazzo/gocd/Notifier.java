@@ -1,6 +1,6 @@
-package com.github.gmazzo.gocd;
+package com.github.newglobe.gocd;
 
-import com.github.gmazzo.gocd.model.Message;
+import com.github.newglobe.gocd.model.Message;
 
 public interface Notifier {
 

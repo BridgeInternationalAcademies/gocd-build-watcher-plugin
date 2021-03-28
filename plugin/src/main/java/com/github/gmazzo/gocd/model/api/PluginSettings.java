@@ -1,4 +1,4 @@
-package com.github.gmazzo.gocd.model.api;
+package com.github.newglobe.gocd.model.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.Iterator;
 import java.util.Map;
 
-import static com.github.gmazzo.utils.StringUtils.isBlank;
+import static com.github.newglobe.utils.StringUtils.isBlank;
 
 public class PluginSettings {
     public static final String SETTING_SERVER_BASE_URL = "server_base_url";

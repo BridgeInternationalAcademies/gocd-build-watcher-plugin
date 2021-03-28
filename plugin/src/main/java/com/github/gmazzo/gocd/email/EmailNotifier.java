@@ -1,14 +1,14 @@
-package com.github.gmazzo.gocd.email;
+package com.github.newglobe.gocd.email;
 
-import com.github.gmazzo.gocd.Notifier;
-import com.github.gmazzo.gocd.model.Message;
+import com.github.newglobe.gocd.Notifier;
+import com.github.newglobe.gocd.model.Message;
 
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 
-import static com.github.gmazzo.utils.StringUtils.isBlank;
+import static com.github.newglobe.utils.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringEscapeUtils.escapeHtml3;
 
 public class EmailNotifier implements Notifier {

@@ -1,7 +1,7 @@
-package com.github.gmazzo.gocd.slack;
+package com.github.newglobe.gocd.slack;
 
-import com.github.gmazzo.gocd.Notifier;
-import com.github.gmazzo.gocd.model.Message;
+import com.github.newglobe.gocd.Notifier;
+import com.github.newglobe.gocd.model.Message;
 import com.github.seratch.jslack.Slack;
 import com.github.seratch.jslack.api.methods.SlackApiException;
 import com.github.seratch.jslack.api.methods.SlackApiResponse;
@@ -16,7 +16,7 @@ import java.util.Collections;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static com.github.gmazzo.utils.StringUtils.isBlank;
+import static com.github.newglobe.utils.StringUtils.isBlank;
 
 public class SlackNotifier implements Notifier {
     private final Slack slack = Slack.getInstance();

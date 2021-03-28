@@ -1,4 +1,4 @@
-package com.github.gmazzo.utils;
+package com.github.newglobe.utils;
 
 import java.io.IOException;
 import java.util.Properties;

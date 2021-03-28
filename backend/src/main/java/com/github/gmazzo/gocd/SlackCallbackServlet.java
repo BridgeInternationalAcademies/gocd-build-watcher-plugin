@@ -1,6 +1,6 @@
-package com.github.gmazzo.gocd;
+package com.github.newglobe.gocd;
 
-import com.github.gmazzo.utils.PropertiesUtils;
+import com.github.newglobe.utils.PropertiesUtils;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 

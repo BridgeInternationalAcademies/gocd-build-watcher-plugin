@@ -6,10 +6,10 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
 def goVersion = '20.1.2'
-
+def author = 'NewGlobe'
 def repoName = 'gocd-build-watcher-plugin'
 def repoDesc = 'A GoCD notification plugin which sends direct emails and Slack messages to the person who breaks a build'
-def repoUrl = "https://github.com/gmazzo/$repoName"
+def repoUrl = "https://github.com/BridgeInternationalAcademies/$repoName"
 def repoTags = ['go', 'go-cd', 'plugin', 'slack', 'email']
 
 sourceSets {
@@ -45,7 +45,7 @@ processResources {
             'project.description': repoDesc,
             'project.version'    : project.version,
             'repo.url'           : repoUrl.toString(),
-            'author'             : 'Guillermo Mazzola',
+            'author'             : author,
             'go.version'         : goVersion
     ]
 }

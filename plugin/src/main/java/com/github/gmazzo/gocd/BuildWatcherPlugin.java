@@ -1,9 +1,9 @@
-package com.github.gmazzo.gocd;
+package com.github.newglobe.gocd;
 
-import com.github.gmazzo.gocd.email.EmailNotifier;
-import com.github.gmazzo.gocd.model.Message;
-import com.github.gmazzo.gocd.model.api.*;
-import com.github.gmazzo.gocd.slack.SlackNotifier;
+import com.github.newglobe.gocd.email.EmailNotifier;
+import com.github.newglobe.gocd.model.Message;
+import com.github.newglobe.gocd.model.api.*;
+import com.github.newglobe.gocd.slack.SlackNotifier;
 import com.google.gson.Gson;
 import com.thoughtworks.go.plugin.api.GoApplicationAccessor;
 import com.thoughtworks.go.plugin.api.GoPlugin;
@@ -23,11 +23,11 @@ import java.net.URLConnection;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.github.gmazzo.gocd.model.api.PluginSettings.*;
-import static com.github.gmazzo.utils.HttpUtils.response;
-import static com.github.gmazzo.utils.IOUtils.readStream;
-import static com.github.gmazzo.utils.MapUtils.map;
-import static com.github.gmazzo.utils.StringUtils.*;
+import static com.github.newglobe.gocd.model.api.PluginSettings.*;
+import static com.github.newglobe.utils.HttpUtils.response;
+import static com.github.newglobe.utils.IOUtils.readStream;
+import static com.github.newglobe.utils.MapUtils.map;
+import static com.github.newglobe.utils.StringUtils.*;
 import static java.lang.Integer.parseInt;
 
 @Extension
@@ -231,7 +231,7 @@ public class BuildWatcherPlugin implements GoPlugin {
     private List<String> getMaterialUsers(List<PipelineInstance.Modification> modifications) {
         return modifications.stream()
                 .filter(m -> m.emailAddress != null || m.userName != null)
-                .map(m -> m.emailAddress != null ? m.emailAddress : extractEmail(m.userName))
+                .map(m -> m.emailAddress != null ? m.emailAddress : getEmailAddressesInString(m.userName))
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
     }

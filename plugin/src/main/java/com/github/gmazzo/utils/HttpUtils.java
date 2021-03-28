@@ -1,4 +1,4 @@
-package com.github.gmazzo.utils;
+package com.github.newglobe.utils;
 
 import com.google.gson.Gson;
 import com.thoughtworks.go.plugin.api.response.DefaultGoPluginApiResponse;
